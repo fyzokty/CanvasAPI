@@ -12,42 +12,41 @@
         var canvas = document.getElementById("canvas");
         var icrk = canvas.getContext("2d");
 
-        //saç
+        //saç(hair)
         icrk.beginPath();
         icrk.arc(100, 100, 90, 0, 2 * Math.PI, false);
         icrk.fillStyle="#000000";
         icrk.fill();
-
         icrk.beginPath();
         icrk.arc(100, 100, 100, 0, Math.PI, false);
         icrk.fillStyle="#FFFFFF";
         icrk.fill();
 
-        // yüz 
+        // yüz(face)
         icrk.beginPath();
         icrk.arc(100, 100, 75, 0, 2 * Math.PI, false);
         icrk.lineWidth = 5;
         icrk.stroke();
         
-        // ten rengi
+        // ten rengi(skin colour)
         var circle = new Path2D();
         circle.arc(100, 100, 75, 0, 2 * Math.PI);
         icrk.fillStyle="#FFDABE"
         icrk.fill(circle);
 
-        // gözler
+        // gözler(eyes)
         icrk.beginPath();
         icrk.arc(70, 80, 10, 0, 2 * Math.PI, false);
         icrk.arc(130, 80, 10, 0, 2 * Math.PI, false);
         icrk.fillStyle="#340FAB"
         icrk.fill();
 
-        // ağız
+        // ağız(mouth)
         icrk.beginPath();
         icrk.arc(100, 110, 50, 0, Math.PI, false);
         icrk.stroke();
 
-        //burun
+        //burun(nose)
         icrk.beginPath();
         icrk.arc(100, 110, 10, 0, 2 * Math.PI, false);
         icrk.fillStyle="#FF00FF"
