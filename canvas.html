@@ -1,0 +1,61 @@
+
+<!-- saved from url=(0097)http://ceng2.ktu.edu.tr/~cmyilmaz/Bilgisayar%20Grafikleri%20Lab./1.%20Canvas%20API/deney_uyg.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>HTML Canvas Elementi</title>
+  
+</head>
+<body style="">
+  <canvas id="canvas" width="600" height="500">
+        Tarayıcı canvas elementini desteklemiyor.
+  </canvas>
+  <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var icrk = canvas.getContext("2d");
+
+        //saç
+        icrk.beginPath();
+        icrk.arc(100, 100, 90, 0, 2 * Math.PI, false);
+        icrk.fillStyle="#000000";
+        icrk.fill();
+
+        icrk.beginPath();
+        icrk.arc(100, 100, 100, 0, Math.PI, false);
+        icrk.fillStyle="#FFFFFF";
+        icrk.fill();
+
+        // yüz 
+        icrk.beginPath();
+        icrk.arc(100, 100, 75, 0, 2 * Math.PI, false);
+        icrk.lineWidth = 5;
+        icrk.stroke();
+        
+        // ten rengi
+        var circle = new Path2D();
+        circle.arc(100, 100, 75, 0, 2 * Math.PI);
+        icrk.fillStyle="#FFDABE"
+        icrk.fill(circle);
+
+        // gözler
+        icrk.beginPath();
+        icrk.arc(70, 80, 10, 0, 2 * Math.PI, false);
+        icrk.arc(130, 80, 10, 0, 2 * Math.PI, false);
+        icrk.fillStyle="#340FAB"
+        icrk.fill();
+
+        // ağız
+        icrk.beginPath();
+        icrk.arc(100, 110, 50, 0, Math.PI, false);
+        icrk.stroke();
+
+        //burun
+        icrk.beginPath();
+        icrk.arc(100, 110, 10, 0, 2 * Math.PI, false);
+        icrk.fillStyle="#FF00FF"
+        icrk.fill();
+
+        
+       
+
+  </script>
+
+</body></html>
